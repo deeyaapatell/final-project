@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aurelian | Contact</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero-wrapper">
+        <header>
+            <h1><a href="index.html">The Aurelian</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Accommodations</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Contact Us</h2>
+                <p>We would be delighted to hear from you. Reach out to begin planning your alpine escape.</p>
+            </div>
+        </section>
+    </div>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h2>Questions or Reservations</h2>
+                    <p>Whether you are planning a romantic getaway, a family retreat, or a corporate event, our dedicated team is here to assist you with every detail of your stay at The Aurelian.</p>
+                    <img src="images/swiss-peak.jpg" alt="Majestic snow-capped Swiss mountain peak at golden hour">
+                </div>
+                <form method="POST" action="https://wp.zybooks.com/form-viewer.php">
+                    <fieldset>
+                        <legend>Get in Touch</legend>
+                        
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="radio-label">Preferred Contact Method</p>
+                            <div class="radio-group">
+                                <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                                <label for="contact-email">Email</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                                <label for="contact-phone">Phone</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Comments</label>
+                            <textarea id="comments" name="comments" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Aurelian. All rights reserved.</p>
+    </footer>
+</body>
+</html>

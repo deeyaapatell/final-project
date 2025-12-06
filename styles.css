@@ -1,0 +1,426 @@
+/* CSS Variables */
+:root {
+    --cream: #f5ede1;
+    --navy: #060640;
+    --gold: #c7a349;
+    --max-width: 1280px;
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cream);
+    color: var(--navy);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--navy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--gold);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Container */
+main,
+footer {
+    width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Wrapper - Contains Header + Hero with Background Image */
+.hero-wrapper {
+    width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(245, 237, 225, 0.25), rgba(245, 237, 225, 0.25)), url('images/swiss-valley.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+header h1 a {
+    color: var(--navy);
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: var(--gold);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--gold);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    width: 80%;
+}
+
+nav a.active {
+    color: var(--gold);
+}
+
+nav a.active::after {
+    width: 80%;
+}
+
+nav a:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    color: var(--navy);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--navy);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Intro Section - Homepage */
+.intro-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-section h2 {
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+}
+
+.intro-section p {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Content Section - Two Column Grid */
+.content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 5rem 5rem 5rem;
+}
+
+.content-card {
+    text-align: center;
+}
+
+.content-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.content-card h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.content-card p {
+    text-align: left;
+    color: var(--navy);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 5rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-left h2 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.contact-left p {
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.contact-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.radio-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--navy);
+    background-color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--navy);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover {
+    border-color: var(--gold);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(199, 163, 73, 0.3);
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+    border-color: #c74949;
+    box-shadow: 0 0 0 3px rgba(199, 73, 73, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Radio Buttons */
+.radio-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.radio-group label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--gold);
+    cursor: pointer;
+}
+
+input[type="radio"]:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: var(--navy);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--navy);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(199, 163, 73, 0.5);
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+}
